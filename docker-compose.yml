@@ -1,0 +1,28 @@
+
+
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg14
+    container_name: timescaledb
+    environment:
+      POSTGRES_USER: agentic
+      POSTGRES_PASSWORD: agenticpass
+      POSTGRES_DB: agentic_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - tsdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  app:
+    image: python:3.11-slim
+    container_name: agentic_app
+    depends_on:
+      - timescaledb
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    tty: true
+
+volumes:
+  tsdata:
