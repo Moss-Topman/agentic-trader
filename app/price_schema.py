@@ -1,5 +1,5 @@
 # price_schema.py
-# FROZEN SCHEMA v1.0.0 - DO NOT MODIFY WITHOUT VERSION BUMP
+# FROZEN SCHEMA v1.1.0 - Added true_regime for ground truth regime signal
 # Any change to this file = breaking change = major version increment
 
 from dataclasses import dataclass
@@ -50,11 +50,14 @@ class PriceObservation:
     - No silent defaults (Optional = None when unavailable)
     - Immutable (frozen=True prevents mutation bugs)
     
-    Schema Version: 1.0.0
+    Schema Version: 1.1.0
     Market: Crypto Spot, BTC/USDT, Tier-1
+    
+    v1.1.0 Changes:
+    - Added true_regime field for ground truth regime signal from data generator
     """
     
-    SCHEMA_VERSION: ClassVar[str] = "1.0.0"
+    SCHEMA_VERSION: ClassVar[str] = "1.1.0"
 
     # === Identifiers ===
     time: datetime        # UTC timestamp, no local time nonsense
@@ -82,3 +85,7 @@ class PriceObservation:
 
     # === Context ===
     metadata: MarketMetadata  # Explicit market type and tier
+    
+    # === Ground Truth Regime (NEW in v1.1.0) ===
+    # MUST come after all non-default fields due to dataclass ordering rules
+    true_regime: int = 0     # Ground truth: 0=chop, 1=trend (from generator)
