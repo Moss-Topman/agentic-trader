@@ -89,7 +89,7 @@ Training Configuration:
 
 ### Training Screenshot
 
-![Training Results](assets/training-reward.png)
+![Training Results](assets/sac-training.png)
 
 Training metrics observed during experimentation:
 
