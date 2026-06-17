@@ -1,4 +1,4 @@
-# agentic-trader
+
 # Agentic Trading AI
 
 A reinforcement learning trading research platform designed to explore adaptive decision-making, risk-aware execution, and modular trading system architecture.
@@ -89,7 +89,7 @@ Training Configuration:
 
 ### Training Screenshot
 
-![Training Results](assets/sac-training.png)
+![Training Results](assets/training-reward.png)
 
 Training metrics observed during experimentation:
 
