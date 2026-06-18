@@ -1,3 +1,4 @@
+<img width="847" height="598" alt="Screenshot 2026-05-22 125530" src="https://github.com/user-attachments/assets/1d6ebb91-fa0f-4d5f-9d35-e87179d13395" />
 
 # Agentic Trading AI
 
