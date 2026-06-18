@@ -1,4 +1,4 @@
-<img width="847" height="598" alt="Screenshot 2026-05-22 125530" src="https://github.com/user-attachments/assets/1d6ebb91-fa0f-4d5f-9d35-e87179d13395" />
+
 
 # Agentic Trading AI
 
@@ -90,9 +90,13 @@ Training Configuration:
 
 ### Training Screenshot
 
-![Training Results](assets/sac-training.png)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1d6ebb91-fa0f-4d5f-9d35-e87179d13395" alt="SAC Training Results" width="900">
+</p>
 
-Training metrics observed during experimentation:
+Training run showing reward stability, trade frequency, win-rate evolution, drawdown control, and account growth across thousands of episodes.
+
+---
 
 * 5,000+ Episodes
 * 1,000,000+ Simulated Candles
